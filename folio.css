@@ -1,0 +1,244 @@
+/*Body CSS*/
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+hr {
+  height: 18px;
+  width: 114px;
+  background: url('images/hr.png') center center no-repeat;
+  margin: 30px auto;
+  border: none;
+}
+
+/*the hamburger*/
+#toggler {
+  display: block;
+  text-align: center;
+  position: fixed;
+  background: #fade1b;
+  padding: 20px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  right: 40px;
+  top: 30px;
+}
+
+/* the pointer or click area*/
+#toggler input {
+  cursor: pointer;
+  opacity: 0;
+  z-index: 999;
+}
+
+/* the transformed hamburger*/
+#toggler input:checked + .ham_menu > span {
+  opacity: 1;
+  transform: rotate(-45deg) translate(-2px, -1px);
+  background: #fafcfc;
+}
+
+#toggler input:checked + .ham_menu > span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#toggler input:checked + .ham_menu > span:nth-last-child(2) {
+  transform: rotate(45deg) translate(0, -1px);
+}
+
+/* displaying the menu after clicking on input tag*/
+#toggler input:checked ~ .toggled_menu {
+  opacity: 1;
+  transition: background 0.3s;
+  position: relative;
+  z-index: -1;
+  top: -100px;
+  right: -50px;
+}
+
+/* positioning of the hamburger (untransformed)*/
+.ham_menu {
+  margin: -15px 0 0 1px;
+}
+
+/* styling of the span elements that form a hamburger */
+.hamburger {
+  width: 35px;
+  height: 4px;
+  z-index: 1;
+  background: #fff;
+  display: block;
+  margin: 6px;
+  border-radius: 4px;
+  transform-origin: -1px -20px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+}
+
+/* transformation angles of the hamburger menu*/
+.ham_menu span:first-child {
+  transform-origin: -100%;
+}
+
+.ham_menu span:nth-last-child(2) {
+  transform-origin: 80% 150%;
+}
+
+/* The displayed menu*/
+.toggled_menu {
+  float: right;
+  width: 300px;
+  height: 300px;
+  border-bottom-left-radius: 500px;
+  margin-right: -10px;
+  padding: 50px;
+  background: #555;
+  animation: anim-jelly 0.8s linear forwards;
+  opacity: 0;
+}
+
+/* specified menu styling*/
+.menu {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.menu li {
+  list-style-type: none;
+  margin-bottom: inherit;
+  text-transform: uppercase;
+  color: #fafcfc;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+/* -- AREA BELOW HEADER --
+The introduction */
+
+.mid-section {
+  margin-top: 200px;
+}
+
+#intro {
+  max-width: 1050px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+#my_name {
+  font-size: 1.5em;
+  margin-bottom: 50px;
+  margin-left: 10px;
+}
+
+#my_work {
+  font-size: 5.5em;
+}
+
+.photo {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* the */
+.lower-mid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: -80px;
+  margin-bottom: 180px;
+}
+
+.pt-element {
+  width: 320px;
+  padding: 20px;
+  background: #ffffff;
+  border: 5px solid #fade1b;
+  margin-right: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.years_of_experience {
+  text-align: right;
+  padding: 20px;
+  font-size: 25px;
+  color: #888;
+}
+
+.pt-element h3 {
+  font-size: 3em;
+  padding: 20px 0;
+}
+
+.pt-element p {
+  font-size: 25px;
+  padding: 20px 0;
+  color: #666;
+}
+
+/* About page*/
+
+#eves-work {
+  font-size: 4em;
+  margin-bottom: 100px;
+}
+
+.pro-life img {
+  width: 500px;
+  float: left;
+  padding-right: 20px;
+}
+
+.pro-life h4 {
+  text-align: center;
+  font-size: 1.7em;
+  margin: 30px 0 20px;
+}
+
+#community {
+  display: flex;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+#community span {
+  width: 75%;
+  padding: 60px;
+  text-align: justify;
+  background: #111247;
+    color: #f0f8ff;
+}
+
+#community p {
+  width: 25%;
+  text-align: center;
+}
+
+#community p img {
+  width: 200px;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  left: 0;
+  width: 100%;
+  padding: 40px 0;
+  background: #f5f5dc;
+}
+
+.copyright {
+  font-family: "Anaktoria";
+  color: #888;
+}
